@@ -1,24 +1,17 @@
-import { useState } from "react";
 import ExpenseDate from "./ExpenseDate";
 import "./ExpenseItem.css";
 import Card from "../UI/Card";
 
 const ExpenseItem = (pdict) => {
-  const [title, setTitle] = useState(pdict.title);
-
-  const clickHandler = () => {
-   setTitle('Updated');
-  }
   return (
     <Card className="expense-item">
       <ExpenseDate date={pdict.date} />
       <div className="expense-item__description">
-        <h2>{ title }</h2>
+        <h2>{ pdict.title }</h2>
         <div className="expense-item__price">
           <span>${pdict.amount}</span>
         </div>
       </div>
-      <button onClick={clickHandler}>Change Title</button>
     </Card>
   );
 }
