@@ -4,15 +4,17 @@ import Card from "../UI/Card";
 
 const ExpenseItem = (pdict) => {
   return (
-    <Card className="expense-item">
-      <ExpenseDate date={pdict.date} />
-      <div className="expense-item__description">
-        <h2>{ pdict.title }</h2>
-        <div className="expense-item__price">
-          <span>${pdict.amount}</span>
+    <li>
+      <Card className="expense-item">
+        <ExpenseDate date={pdict.date} />
+        <div className="expense-item__description">
+          <h2>{ pdict.title }</h2>
+          <div className="expense-item__price">
+            <span>${pdict.amount}</span>
+          </div>
         </div>
-      </div>
-    </Card>
+      </Card>
+    </li>
   );
 }
 
