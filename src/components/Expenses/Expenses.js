@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Card from "../UI/Card";
 import ExpensesFilter from './ExpensesFilter';
 import ExpenseList from './ExpensesList';
+import ExpenseChart from './ExpensesChart';
 import './Expenses.css';
 
 const Expenses = (pdict) => {
@@ -22,6 +23,7 @@ const Expenses = (pdict) => {
     return (
         <Card className="expenses">
             <ExpensesFilter selected={filteredYear} onChangeFilter={filterChangeHandler} />
+            <ExpenseChart expenses= {filteredExpenses } />
             <ExpenseList expenses = {filteredExpenses} />
         </Card>
     );
